@@ -1,0 +1,13 @@
+###
+GET http://localhost:3000/health
+
+###
+GET http://localhost:3000/users/id/1
+
+###
+GET http://localhost:3000/users/email/2660918
+###
+GET http://localhost:3000/users/email/660918
+
+
+### Post Requests
