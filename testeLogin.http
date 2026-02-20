@@ -1,0 +1,14 @@
+### LOGIN
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "2660918",
+  "senha": "123456"
+}
+
+
+### BUSCAR USUÁRIO
+GET http://localhost:3000/users/id/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiIyNjYwOTE4IiwiaWF0IjoxNzcwODMzMTM4LCJleHAiOjE3NzA4MzY3Mzh9.Nbe__Wg45VmD0OErp3l5nEOqllQQlK9XU4NUohj0t0Y
+
