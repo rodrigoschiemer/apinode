@@ -1,6 +1,6 @@
-const app = require('./app');
+import app from './app.js';
 
-const { testConnection } = require('./database/db');
+import { testConnection } from './database/db.js';
 
 async function start(){
 

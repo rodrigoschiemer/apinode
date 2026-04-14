@@ -1,6 +1,6 @@
-const db = require('../database/db');
+import * as db from '../database/db.js';
 
-exports.createUser = async (user)=>{
+export const createUser = async (user)=>{
 	const sql = `INSERT INTO usuarios (NOME_USUARIO, EMAIL, SENHA_TEMP) VALUES (?, ?, ?)`;
 
 	const result = await db.execute(sql, [user.name, user.email, user.password]);
@@ -11,13 +11,12 @@ exports.createUser = async (user)=>{
 	};
 };
 
-exports.findByEmail = async (email)=>{
+export const findByEmail = async (email)=>{
 	const rows = await db.query(`SELECT * FROM usuarios WHERE EMAIL = ?`, [email]);
 	return rows[0];
 };
 
-exports.findById = async (id)=>{
+export const findById = async (id)=>{
 	const rows = await db.query(`SELECT * FROM usuarios WHERE USUARIO_ID = ?`, [id]);
 	return rows[0];
 };
-

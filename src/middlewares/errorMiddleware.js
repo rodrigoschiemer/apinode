@@ -1,4 +1,4 @@
-module.exports = (err, req, res, next) => {
+export default function errorMiddleware (err, req, res, next) {
 
 	console.error(err);
 

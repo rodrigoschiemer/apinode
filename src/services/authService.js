@@ -1,9 +1,9 @@
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const userRepository = require('../repositories/userRepository');
-const AppError = require('../errors/AppError');
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
+import * as userRepository from '../repositories/userRepository.js';
+import AppError from '../errors/AppError.js';
 
-exports.login = async (email, senha) => {
+export const login = async (email, senha) => {
 
 	const user = await userRepository.findByEmail(email);
 
@@ -35,4 +35,3 @@ exports.login = async (email, senha) => {
 	return { token };
 
 };
-

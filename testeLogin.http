@@ -10,5 +10,5 @@ Content-Type: application/json
 
 ### BUSCAR USUÁRIO
 GET http://localhost:3000/users/id/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiIyNjYwOTE4IiwiaWF0IjoxNzcwODMzMTM4LCJleHAiOjE3NzA4MzY3Mzh9.Nbe__Wg45VmD0OErp3l5nEOqllQQlK9XU4NUohj0t0Y
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiIyNjYwOTE4IiwiaWF0IjoxNzc2MjAwMDcyLCJleHAiOjE3NzYyMDAxMzJ9.1eKjlUXlYR0ntUZ2Sx_eU35kjGF1MYdjV-MHkbSNqBU
 

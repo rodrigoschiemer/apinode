@@ -1,13 +1,12 @@
-const authService = require('../services/authService');
-const response = require('../utils/response');
+import * as authService from '../services/authService.js';
+import { success } from '../utils/response.js';
 
-exports.login = async (req, res, next) => {
+export const login = async (req, res, next) => {
 	try {
 		const { email, senha } = req.body;
 		const result = await authService.login(email, senha);
-		return response.success(res, result, 'Login realizado com sucesso');
+		return success(res, result, 'Login realizado com sucesso');
 	} catch (err) {
 		next(err);
 	}
 };
-

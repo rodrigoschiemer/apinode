@@ -1,4 +1,4 @@
-module.exports = (user) => {
+export default function userDTO(user) {
 	const {
 		SENHA,
 		SENHA_TEMP,
