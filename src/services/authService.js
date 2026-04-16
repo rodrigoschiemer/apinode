@@ -11,11 +11,7 @@ export const login = async (email, senha) => {
 		throw new AppError('Credenciais inválidas', 401);
 	}
 
-	//const senhaValida = await bcrypt.compare(senha, user.SENHA_TEMP);
-
-	const senhaValida = await senha === user.SENHA_TEMP;
-	console.log("Senha enviada: ", senha);
-	console.log("Senha BD: ", user.SENHA_TEMP);
+	const senhaValida = await bcrypt.compare(senha, user.SENHA_TEMP);
 
 	if (!senhaValida) {
 		throw new AppError('Credenciais inválidas', 401);
