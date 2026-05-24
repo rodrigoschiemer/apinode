@@ -6,7 +6,7 @@ export default function authMiddleware(req, res, next) {
 	const authHeader = req.headers.authorization;
 
 	if (!authHeader) {
-		throw new AppError('Token não fornecido', 401);
+		return next(new AppError('Token não fornecido', 401));
 	}
 
 	const [, token] = authHeader.split(' ');
@@ -16,7 +16,7 @@ export default function authMiddleware(req, res, next) {
 		req.user = decoded; // id, email
 		next();
 	} catch (err) {
-		throw new AppError('Token inválido ou expirado', 401);
+		return next(new AppError('Token inválido ou expirado', 401));
 	}
 
 };

@@ -4,7 +4,8 @@ import { success } from '../utils/response.js';
 export const create = async (req,res,next)=>{
 	try{
 		const user = await userService.create(req.body);
-		res.status(201).json(user);
+		//res.status(201).json(user);
+		return success(res, user);
 	}catch(err){
 		next(err);
 	}
