@@ -6,10 +6,10 @@ export const create = async (data)=>{
 	const existing = await userRepository.findByEmail(data.email);
 
 	if(existing){
-		throw new AppError("User already exists",409);
+		throw new AppError("Usuário já existe",409);
 	}
 
-	const user = await userRepository.create(data);
+	const user = await userRepository.createUser(data);
 	return userDTO(user);
 };
 
@@ -17,7 +17,7 @@ export const findById = async (id)=>{
 	const user = await userRepository.findById(id);
 
 	if(!user){
-		throw new AppError("User not found",404);
+		throw new AppError("Usuário não encontrado",404);
 	}
 
 	return userDTO(user);
