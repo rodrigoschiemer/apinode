@@ -1,16 +1,4 @@
-import path from 'path';
-import dotenv from 'dotenv';
 import mysql from 'mysql2/promise';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Não concatenar o caminho, pois pode ser diferente em cada ambiente (Windows, Linux, etc)
-// Usamos path.resolve para garantir que o caminho seja correto, independente do sistema operacional
-dotenv.config({
-	path: path.resolve(__dirname, '../../.env')
-});
 
 export const pool = mysql.createPool({
 	host: process.env.DB_HOST,

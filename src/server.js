@@ -1,6 +1,9 @@
-import app from './app.js';
+import dotenv from 'dotenv';
 
-import { testConnection } from './database/db.js';
+dotenv.config();
+
+const { default: app } = await import('./app.js');
+const { testConnection } = await import('./database/db.js');
 
 async function start(){
 
