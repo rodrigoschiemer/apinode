@@ -1,5 +1,5 @@
 ###
-GET http://localhost:3000/health
+GET http://localhost:3000/test/health
 
 ###
 GET http://localhost:3000/users/id/1
