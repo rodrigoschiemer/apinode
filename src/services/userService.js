@@ -2,7 +2,7 @@ import * as userRepository from '../repositories/userRepository.js';
 import userDTO from '../dtos/userDTO.js';
 import AppError from '../errors/AppError.js';
 
-export const create = async (data)=>{
+export const createUser = async (data)=>{
 	const existing = await userRepository.findByEmail(data.email);
 
 	if(existing){
