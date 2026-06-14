@@ -16,7 +16,7 @@ export const loginSchema = z.object({
 	senha: z
 		.string({ required_error: 'Senha é obrigatória' })
 		.min(1, 'Senha não pode ser vazia')
-		.max(128, 'Senha muito longa'),                            // proteção contra payloads gigantes
+		.max(64, 'Senha muito longa'),                            // proteção contra payloads gigantes
 
 });
 
@@ -39,6 +39,6 @@ export const createUserSchema = z.object({
 	senha: z
 		.string({ required_error: 'Senha é obrigatória' })
 		.min(8, 'Senha deve ter ao menos 8 caracteres')
-		.max(128, 'Senha muito longa'),
+		.max(64, 'Senha muito longa'),
 
 });
